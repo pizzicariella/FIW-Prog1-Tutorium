@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Die Klasse Kara implementiert Methoden, die Kara ausführen kann
+ * Die Klasse Kara implementiert Methoden, die Kara ausfÃ¼hren kann
  * @author : Joern Freiheit 
  */
 public class MyKara extends Kara
@@ -25,9 +25,6 @@ public class MyKara extends Kara
                     turnRight();
                     move();
                 }
-                /*if(!treeFront()){
-                    move();
-                }*/
             }
             while(!treeFront() && !onLeaf())
             {
