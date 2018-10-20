@@ -28,45 +28,30 @@ public class MyKara extends Kara {
         drawDiagonal();
         drawDiagonal();
         drawDiagonal();
-        
-        turnLeft();
-        turnLeft();
-        move();
-        move();
-        turnRight();
-        move();
-        turnRight();
     }
     
     public void drawDiagonal(){
         
+        move();
         putLeaf();
         move();
         turnRight();
         move();
+        putLeaf();
+        move();
         turnLeft();
+        move();
         putLeaf();
         move();
         turnRight();
         move();
+        putLeaf();
+        move();
         turnLeft();
+        move();
         putLeaf();
         move();
         turnRight();
-        move();
-        turnLeft();
-        putLeaf();
-        move();
-        turnRight();
-        move();
-        turnLeft();
-        putLeaf();
-        
-        turnRight();
-        move();
-        turnRight();
-        move();
-        turnLeft();
     }
 
 }
