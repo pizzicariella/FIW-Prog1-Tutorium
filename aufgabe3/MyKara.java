@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Die Klasse Kara implementiert Methoden, die Kara ausführen kann
+ * Die Klasse Kara implementiert Methoden, die Kara ausfÃ¼hren kann
  * @author : IhrName 
  */
 public class MyKara extends Kara
@@ -13,7 +13,6 @@ public class MyKara extends Kara
     
     public void calculate(){
         int counter=0;
-        int i = 0;
         while(!treeLeft()){
             while(!treeFront()){
                 move();
@@ -39,7 +38,6 @@ public class MyKara extends Kara
                 turnRight();
                 move();
                 turnRight();
-                i++;
         }
         if(counter == 1){
             putLeaf();
