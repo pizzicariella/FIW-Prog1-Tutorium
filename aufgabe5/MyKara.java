@@ -22,30 +22,45 @@ public class MyKara extends Kara {
         drawPyramid(11);
     }
     public void drawPyramid(int rows){
-        for(int i=1; i<rows; i++){
+        for(int i=0; i<rows; i++){
             move();
         }
-        putLeaf();
-        turnRight();
-        move();
-        turnRight();
-        move();
-        turnRight();
-        turnRight();
-        for(int i=1; i<rows; i++){
-            for(int j=0; j<i*2+1; j++){
+        for(int row=0; row<rows; row++){
+            for(int j=0; j<row*2+1; j++){
                 putLeaf();
                 move();
             }
             turnRight();
             move();
             turnRight();
-            for(int k = 0; k<=i*2+1; k++){
+            for(int k = 0; k<=row*2+1; k++){
                  move();
             }
             turnRight();
             turnRight();
         }
     }
-
+    /* Hier eine alternative Lösung ohne zurücklaufen:
+    
+    public void drawPyramid(int rows){
+      for(int i = 0; i<rows; i++){
+          move();
+      }
+      for(int row=0; row<rows; row++){
+          for(int i = 0; i<2*row+1;i++){
+              putLeaf();
+              move();
+          }
+          if(row%2 == 0){
+              turnRight();
+              move();
+              turnRight();
+          }
+          else{
+              turnLeft();
+              move();
+              turnLeft();
+          }
+      }
+    }*/
 }
