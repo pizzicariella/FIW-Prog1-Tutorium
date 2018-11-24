@@ -7,15 +7,14 @@ public class Pyramide {
 	}
 	
 	public static void printPyramid(int height, char symbol){
-		for(int i = 0; i < height; i++){
-			for(int k = 0; k<height-i; k++){
+		for(int row=0; row<height; row++){
+			for(int spaces= height-row; spaces> 0; spaces--){
 				System.out.print(" ");
 			}
-			for(int j = 0; j< 2*i+1; j++){
+			for(int sym = 0; sym<row*2+1; sym++){
 				System.out.print(symbol);
 			}
 			System.out.println();
 		}
 	}
-
 }
