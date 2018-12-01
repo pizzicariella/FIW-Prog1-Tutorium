@@ -10,7 +10,7 @@ public class Primenumbers {
 		if(number ==0 || number == 1){
 			return false;
 		}
-		for(int i = number-1; i>1; i--){
+		for(int i = 2; i<number; i++){ //effizienter mit folgender Bedingung: i<=Math.ceil(Math.sqrt(number)) -> wenn keine Primzahl, muss es bis dahin einen Teiler geben
 			if(number%i == 0){
 				return false;
 			}
