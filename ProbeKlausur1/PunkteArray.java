@@ -55,7 +55,26 @@ public class PunkteArray {
 		return oben;
 	}
 	
+	@Override
+	public String toString(){
+		Strecke[] streckenA = erzeugePolygon();
+		String s = "";
+		for(int i = 0; i<streckenA.length; i++){
+			s+=streckenA[i].toString+"\n";		
+		}
+		s+= "Gesamtlaenge der Strecken: "+gesamtLaenge()+"cm \n";
+		s+= "Am weitesten Links : "+amWeitestenLinks().toString()+ "\n";
+		s+= "Am weitesten oben : "+amWeitestenOben().toString()+ "\n";
+		return s;
+	}
+	
 	public void printStrecken(){
+		System.out.println(this.toString());
+	}
+	
+	//alternativ ohne toString() Methode:
+	
+	/*public void printStrecken(){
 		Strecke[] streckenA = erzeugePolygon();
 		for(int i = 0; i< streckenA.length; i++){
 			streckenA[i].print();
@@ -63,5 +82,5 @@ public class PunkteArray {
 		System.out.println("Gesamtlaenge der Strecken: "+gesamtLaenge()+"cm");
 		System.out.println("Am weitesten Links : "+amWeitestenLinks().toString());
 		System.out.println("Am weitesten oben : "+amWeitestenOben().toString());
-	}
+	}*/
 }
